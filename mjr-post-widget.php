@@ -59,7 +59,7 @@ class mjr_featured_post_widget extends WP_Widget {
 				$returned_button .= "<a href='".$link."'>";
 			}
 			$returned_button .= "<div class='postbox-text'>";
-			$returned_button .= "<h2>".$title."</h2>";
+			$returned_button .= "<h2 class='post-title'>".$title."</h2>";
 			$returned_button .= $content;
 			$returned_button .= '<p>'.__("Read Article &rarr;", 'mjr').'</p>';
 			$returned_button .= '</div>';
@@ -112,7 +112,7 @@ class mjr_featured_post_widget extends WP_Widget {
 
 			<p>
 				<label for="<?php echo $this->get_field_name( 'info' ); ?>"><?php _e( 'Content:', 'mjr' ); ?></label>
-				<textarea class="widefat" id="<?php echo $this->get_field_id( 'info' ); ?>" name="<?php echo $this->get_field_name( 'info' ); ?>"><?php echo esc_attr( $info ); ?></textarea>
+				<textarea class="widefat" id="<?php echo $this->get_field_id( 'info' ); ?>" placeholder="Optional Text" name="<?php echo $this->get_field_name( 'info' ); ?>"><?php echo esc_attr( $info ); ?></textarea>
 			</p>
 
 	 <?php
